@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SmartSpend- a mordern 2026 express tracker built by vanilla JS"/>
+    <title>SmartSpend  --  Track your money</title>
+    <link rel="stylesheet" href="style.css"/>
+
+</head>
+<body>
+
+    <header class="topber">
+        <div class="brand"><span class="dot"></span>Smart spend</div>
+        <button id="themeBtn" class="ghost">🌛Dark</button>
+    </header>
+    <main class="wrap">
+        <section class="cards">
+            <article class="card">
+                <p class="label">Income</p>
+                <h2 id="totalIncome" class="up">tk0</h2>
+            </article>
+            <article class="card">
+                <p class="label">Expence</p>
+                <h2 id="totalExpence" class="down">tk0</h2>
+
+            </article>
+            <article class="card highlight">
+                <p class="label">Balance</p>
+                <h2 id="balance" > tk0</h2>
+            </article>
+        </section>
+        <section class="grid">
+            <form id="txForm" class="panel">
+
+                <h3 >Add transaction</h3>
+                <label>Title <input type="text" name="title" placeholder="e.g Mr Zisan" required />
+                </label>
+                <label > 
+                    Amount <input type="text" name="amount" min="1" step="1" placeholder="0" required />
+                </label>
+                <div class="row">
+                    <label>Type
+                        <section name="type" required >
+                            <option value="expance">Expance</option>
+                            <option value="income">Income</option>
+                            
+                        </section>
+                    </label>
+                </div>
+            </form>
+        </section>
+    </main>
+    
+</body>
+</html>
