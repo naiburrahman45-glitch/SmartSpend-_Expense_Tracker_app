@@ -10,95 +10,149 @@
 </head>
 <body>
 
-    <header class="topber">
-        <div class="brand"><span class="dot"></span>Smart spend</div>
-        <button id="themeBtn" class="ghost">🌛Dark</button>
-    </header>
-    <main class="wrap">
-        <section class="cards">
-            <article class="card">
-                <p class="label">Income</p>
-                <h2 id="totalIncome" class="up">tk0</h2>
-            </article>
-            <article class="card">
-                <p class="label">Expence</p>
-                <h2 id="totalExpence" class="down">tk0</h2>
+   <header class="topber">
+    <div class="brand"><span class="dot"></span>Smart spend</div>
+    <button id="themeBtn" class="ghost">🌛 Dark</button>
+</header>
 
-            </article>
-            <article class="card highlight">
-                <p class="label">Balance</p>
-                <h2 id="balance" > tk0</h2>
-            </article>
-        </section>
-        <section class="grid">
-            <form id="txForm" class="panel">
+<main class="wrap">
 
-                <h3 >Add transaction</h3>
-                <label>Title <input type="text" name="title" placeholder="e.g Mr Zisan" required />
-                </label>
-                <label > 
-                    Amount <input type="text" name="amount" min="1" step="1" placeholder="0" required />
-                </label>
-                <div class="row">
-                    <label>Type
-                        <section name="type" required >
-                            <option value="expance">Expance</option>
-                            <option value="income">Income</option>
+    <section class="cards">
 
-                        </section>
-                    </label>
-                    <label>Category
-                        <select name="category" required>
-                            <option>Food</option>
-                            <option>Transport</option>
-                            <option>Bills</option>
-                            <option>Salary</option>
-                            <option>other</option>
-                        </select>
-                    </label>
-                </div>
-                <label>Date <input type="date" name="date" required/></label>
-                <button type="submit" class="primary">+ Add Transaction</button>
-            </form>
-            <div class="panel">
-                <h3>Category</h3>
-                <div id="chart" class="chart"></div>
-                <p class="hint">Only expance category are show.</p>
-            </div>
-        </section>
-        <section class="panel">
-            <dov class="filterber">
-                <h3>Transection</h3>
-                <div class="filters">
-                    <select id="filterType">
-                        <option value="all">All</option>
+        <article class="card">
+            <p class="label">Income</p>
+            <h2 id="totalIncome" class="up">tk 0</h2>
+        </article>
+
+        <article class="card">
+            <p class="label">Expense</p>
+            <h2 id="totalExpense" class="down">tk 0</h2>
+        </article>
+
+        <article class="card highlight">
+            <p class="label">Balance</p>
+            <h2 id="balance">tk 0</h2>
+        </article>
+
+    </section>
+
+
+    <section class="grid">
+
+        <form id="txForm" class="panel">
+
+            <h3>Add transaction</h3>
+
+            <label>
+                Title
+                <input type="text" name="title" placeholder="e.g Grocery" required />
+            </label>
+
+            <label>
+                Amount
+                <input type="number" name="amount" min="1" step="1" placeholder="0" required />
+            </label>
+
+            <div class="row">
+
+                <label>
+                    Type
+                    <select name="type" required>
+                        <option value="expense">Expense</option>
                         <option value="income">Income</option>
-                        <option value="ecpance">Expance</option>
                     </select>
-                    <section id="filterCat">
-                        <option value="all">All category</option>
+                </label>
+
+                <label>
+                    Category
+                    <select name="category" required>
                         <option>Food</option>
                         <option>Transport</option>
                         <option>Bills</option>
-                        <option>Shopping</option>
                         <option>Salary</option>
                         <option>Other</option>
+                    </select>
+                </label>
 
-                    </section>
-                    <input id="search" type="search" placeholder="Search title.."/>
-
-                </div>
             </div>
-            <ul id="txList" class="list"></ul>
-            <p id="empty" class="empty hidden"> No transaction yet. Add your first one above</p>
+
+            <label>
+                Date
+                <input type="date" name="date" required />
+            </label>
+
+            <button type="submit" class="primary">
+                + Add Transaction
+            </button>
+
+        </form>
 
 
-        </section>
-        <footer class="foot">
-            <p>&copy;2026 SmartSpend - Built with HTML, CSS, JS by Naibur Rahman</p>
-        </footer>
-        <script src="app.js"></script>
-    </main>
+        <div class="panel">
+
+            <h3>Category</h3>
+
+            <div id="chart" class="chart"></div>
+
+            <p class="hint">
+                Only expense categories are shown.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="panel">
+
+        <div class="filterber">
+
+            <h3>Transaction</h3>
+
+            <div class="filters">
+
+                <select id="filterType">
+                    <option value="all">All</option>
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+
+                <select id="filterCat">
+                    <option value="all">All category</option>
+                    <option>Food</option>
+                    <option>Transport</option>
+                    <option>Bills</option>
+                    <option>Shopping</option>
+                    <option>Salary</option>
+                    <option>Other</option>
+                </select>
+
+                <input
+                    id="search"
+                    type="search"
+                    placeholder="Search title.."
+                />
+
+            </div>
+
+        </div>
+
+        <ul id="txList" class="list"></ul>
+
+        <p id="empty" class="empty hidden">
+            No transaction yet. Add your first one above
+        </p>
+
+    </section>
+
+
+    <footer class="foot">
+        <p>&copy; 2026 SmartSpend - Built with HTML, CSS, JS by Naibur Rahman</p>
+    </footer>
+
+    <script src="app.js"></script>
+
+</main>
     
 </body>
 </html>
