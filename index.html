@@ -44,12 +44,60 @@
                         <section name="type" required >
                             <option value="expance">Expance</option>
                             <option value="income">Income</option>
-                            
+
                         </section>
                     </label>
+                    <label>Category
+                        <select name="category" required>
+                            <option>Food</option>
+                            <option>Transport</option>
+                            <option>Bills</option>
+                            <option>Salary</option>
+                            <option>other</option>
+                        </select>
+                    </label>
                 </div>
+                <label>Date <input type="date" name="date" required/></label>
+                <button type="submit" class="primary">+ Add Transaction</button>
             </form>
+            <div class="panel">
+                <h3>Category</h3>
+                <div id="chart" class="chart"></div>
+                <p class="hint">Only expance category are show.</p>
+            </div>
         </section>
+        <section class="panel">
+            <dov class="filterber">
+                <h3>Transection</h3>
+                <div class="filters">
+                    <select id="filterType">
+                        <option value="all">All</option>
+                        <option value="income">Income</option>
+                        <option value="ecpance">Expance</option>
+                    </select>
+                    <section id="filterCat">
+                        <option value="all">All category</option>
+                        <option>Food</option>
+                        <option>Transport</option>
+                        <option>Bills</option>
+                        <option>Shopping</option>
+                        <option>Salary</option>
+                        <option>Other</option>
+
+                    </section>
+                    <input id="search" type="search" placeholder="Search title.."/>
+
+                </div>
+            </div>
+            <ul id="txList" class="list"></ul>
+            <p id="empty" class="empty hidden"> No transaction yet. Add your first one above</p>
+
+
+        </section>
+        <footer class="foot">
+            <p>&copy;2026 SmartSpend - Built with HTML, CSS, JS by Naibur Rahman</p>
+        </footer>
+        <script src="app.js"></script>
     </main>
     
 </body>
